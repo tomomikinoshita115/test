@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <p>JQerry</p>
+  <p>test</p>
+  <p>test</p>
+  <p>test</p>
+  <p>test</p>
+  <p>test</p>
+  <p>test</p>
+  <p>test</p>
+  <p>test</p>
+  <p>test</p>
+  <p>test</p>
+  <p>test</p>
+  <p>test</p>
+  <p>test</p>
+  <p>test</p>
+  <p>test</p>
+  <p>test</p>
+  <p>test</p>
+  <p>test</p>
+  <p>test</p>
+  <p>test</p>
+  <div id="backtotop"><a href="#">↑</a></div>
+  <div id="pos" style="position:fixed;left: 5px; bottom: 5px;"></div>
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function($) {
+    //$(function)(){
+      $('backtotop').hide();
+      $(window).scroll(function() {
+        $('#pos').text($(this).scroll());
+        if($(this).scroll() >60){
+          $('backtotop').fadeIn();
+        } else {
+          $('backtotop').fadeOut();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
